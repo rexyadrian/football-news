@@ -30,7 +30,17 @@ SECRET_KEY = 'django-insecure-150iu=2big%pfs*3s6o#7x5*2cuoq530#g)ea4%b(gghd5htsm
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "rexy-adrian-footballnews.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "rexy-adrian-footballnews.pbp.cs.ui.ac.id",
+                 
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://rexy-adrian-footballnews.pbp.cs.ui.ac.id",
+]
+
 
 
 # Application definition
@@ -60,7 +70,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
