@@ -3,11 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block meta %} {% endblock meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+        <title>
+            {% block title %} Football News App {% endblock title %}
+        </title>
+    {% endblock meta %}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <script src="https://cdn.tailwindcss.com">
+    </script>
 </head>
 
 <body>
-    {% block content %} {% endblock content %}
+    {% block content %}{% endblock content %}
+    <!-- <footer>
+        <p> &copy; 2025 Football News </p>
+        <p> Aplikasi dikembangan oleh Rexy Adrian Fernando - PBP D </p>
+    </footer> -->
 </body>
 </html>
