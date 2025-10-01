@@ -12,6 +12,7 @@ from main.views import (
     logout_user,
     edit_news,
     delete_news,
+    add_news_entry_ajax,
 )
 
 app_name = 'main'
@@ -29,4 +30,5 @@ urlpatterns = [
     path('json/', show_json, name='show_json'),
     path('xml/<str:news_id>/', show_xml_by_id, name='show_xml_by_id'),
     path('json/<str:news_id>/', show_json_by_id, name='show_json_by_id'),
+    path('create-news-ajax', add_news_entry_ajax, name='add_news_entry_ajax'),
 ]
